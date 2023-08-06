@@ -6,6 +6,12 @@ export default function MultipleStyleSheet() {
     return (
         <View style={styles.container}>
 
+            <View style={styles.darkMode}>
+                <Text style={styles.darkModeText}>
+                    Hello, Android World! <Text style={styles.darkModeBold}>Cool</Text>
+                </Text>
+            </View>
+
             <View style={[styles.box, styles.backgoundBlue, styles.boxShadow, styles.androidShadow]}>
                 <Text style={styles.title}>Hello</Text>
             </View>
@@ -36,5 +42,8 @@ export const styles = StyleSheet.create({
     },
     androidShadow: {
         elevation: 50
-    }
+    },
+    darkMode: {backgroundColor: 'black', height: 40, margin: 5, borderRadius: 5},
+    darkModeText: {color: 'white', textAlign: 'center', marginTop: 8},
+    darkModeBold: {fontWeight: 'bold'},
 })
